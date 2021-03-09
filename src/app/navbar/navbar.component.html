@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+        <img src="../../assets/images/Timey-Logo+Transparent.png" alt="" width="30" height="24" class="d-inline-block align-top">
+        Timey
+      </a>
+    <button mat-icon-button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a mat-button class="nav-link" aria-current="page" routerLink="/">
+              <mat-icon>home</mat-icon> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a mat-button class="nav-link" aria-current="page" routerLink="/main">
+              <i class="fas fa-clock"></i> Time
+          </a>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <form #f="ngForm" [formGroup]="form">
+          <button mat-button (click)=select.open() class="themeButton">
+  
+            <i class="fas fa-palette fa-lg"></i> Theme
+  
+            <mat-select
+              #select
+              formControlName="theme"
+              class="themeSelector">
+              <mat-option value="DARK" selected>Dark</mat-option>
+              <mat-option value="LIGHT">Light</mat-option>
+            </mat-select>
+  
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>

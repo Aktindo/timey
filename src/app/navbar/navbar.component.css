@@ -1,0 +1,35 @@
+.navbar {
+    padding: 15px;
+    background-color: var(--background-secondary) !important;
+}
+
+.navbar-toggler {
+    box-shadow: none !important;
+    color: var(--heading);
+}
+
+.navbar-brand {
+    color: var(--heading);
+}
+
+.navbar-brand img {
+    width: 25px;
+    height: 25px;
+}
+
+.nav-link {
+    padding: 0 16px;
+    color: var(--font) !important;
+}
+
+::ng-deep .themeSelector div.mat-select-arrow-wrapper {
+  display: none;
+}
+
+::ng-deep .themeSelector.mat-select {
+  display: inline;
+}
+
+.themeButton {
+    color: var(--heading);
+}

@@ -1,0 +1,116 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+body {    
+  background: var(--background-primary);
+}
+
+:root, :root[theme=LIGHT] {
+    --heading: #000;
+    --font: #000;
+    
+    --primary: #7ad2c7;
+    --secondary: #6abeb5;
+    --tertiary: #a0e7df;
+
+    --background-primary: #fff;
+    --background-secondary: #f3f0f0;
+    --background-tertiary: #ebebeb;
+}
+:root[theme=DARK] {
+    --heading: #FFFFFF;
+    --font: #F4F2F3;
+
+    --primary: #7ad2c7;
+    --secondary: #6abeb5;
+    --tertiary: #a0e7df;
+
+    --background-primary: #36393F;
+    --background-secondary: #2F3136;
+    --background-tertiary: #202225;
+}
+
+$primary-palette: (
+    50 : #befff7,
+    100 : #b6fdf5,
+    200 : #a9eee6,
+    300 : #97e9df,
+    400 : #7ad2c7,
+    500 : #7fd6cc,
+    600 : #6dc4ba,
+    700 : #66c0b6,
+    800 : #57ada3,
+    900 : #57aca2,
+    A100 : #95e4db,
+    A200 : #8ee2d8,
+    A400 : #8ce4d9,
+    A700 : #90e7dd,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$secondary-palette: (
+    50 : #bcfff7,
+    100 : #a9f8ef,
+    200 : #b0faf1,
+    300 : #a0f5eb,
+    400 : #97ebe1,
+    500 : #7ad2c7,
+    600 : #6bc5bb,
+    700 : #63beb4,
+    800 : #5fb8ad,
+    900 : #5db8ad,
+    A100 : #7ad2c7,
+    A200 : #8fe4da,
+    A400 : #9df0e6,
+    A700 : #acf8ef,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #ffffff,
+    )
+);
+
+$timey-primary: mat-palette($primary-palette);
+$timey-accent: mat-palette($secondary-palette, A200, A100, A400);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$timey-theme: mat-light-theme((
+  color: (
+    primary: $timey-primary,
+    accent: $timey-accent,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($timey-theme);
+

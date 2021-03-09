@@ -1,0 +1,13 @@
+footer {
+    background-color: var(--background-secondary);
+    color: var(--font);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-link {
+    color: var(--heading);
+    background-color: var(--background-primary);
+}
